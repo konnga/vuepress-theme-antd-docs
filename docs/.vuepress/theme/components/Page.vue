@@ -1,22 +1,25 @@
 <template>
   <main class="page">
+    
     <slot name="top" />
-
+    <Toc>
+      <Content slot-key="toc"/>
+    </Toc>
     <Content class="theme-antdocs-content" />
     <PageEdit />
-
     <PageNav v-bind="{ sidebarItems }" />
-    
-    <slot name="bottom" />
+    <PageFooter />
   </main>
 </template>
 
 <script>
+import Toc from '@theme/components/toc.vue'
 import PageEdit from '@theme/components/PageEdit.vue'
+import PageFooter from '@theme/components/PageFooter.vue'
 import PageNav from '@theme/components/PageNav.vue'
 
 export default {
-  components: { PageEdit, PageNav },
+  components: { PageEdit, PageNav, PageFooter, Toc },
   props: ['sidebarItems']
 }
 </script>
@@ -25,7 +28,6 @@ export default {
 @import '../styles/palette.less';
 @import "../styles/wrapper.less";
 .page {
-  padding-bottom: 2rem;
   display: block;
 }
 @media (max-width: @MQMobile) {

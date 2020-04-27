@@ -42,35 +42,19 @@
       </div>
     </main>
 
-    <div v-if="data.footer" class="footer">
-      <div v-if="data.footerWrap && data.footerWrap.length" class="footer-container">
-        <a-row :gutter="{ md: 0,lg:32 }" type="flex" justify="space-around" class="add-bottom">
-          <a-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6" v-for="(footerWrap, index) in data.footerWrap" :key="index">
-            <div>
-              <h2>{{ footerWrap.headline }}</h2>
-              <div class="footer-item" v-for="(item, index) in footerWrap.items" :key="index">
-                <a :href="item.link" target="_blank" v-if="item.title && item.title !== null">
-                  {{ item.title }}
-                </a>
-                <span class="footer-item-separator" v-if="item.details && item.details !== null">-</span>
-                <span class="footer-item-description" v-if="item.details && item.details !== null">{{
-                  item.details
-                }}</span>
-              </div>
-            </div>
-          </a-col>
-        </a-row>
-      </div>
-      <div :class="{ 'footer-divider': isDivider, 'footer-bottom': true }">{{ data.footer }}</div>
-    </div>
+    <PageFooter />
   </div>
 </template>
 
 <script>
+import PageFooter from '@theme/components/PageFooter.vue'
 import { ensureExt } from '../util'
 
 export default {
   name: 'Home',
+  components: {
+    PageFooter,
+  },
 
   data() {
     return {
@@ -104,23 +88,6 @@ export default {
         text: this.data.actionText
       }
     },
-
-    footerColumn() {
-      if (this.data.footerWrap && this.data.footerWrap.length) {
-        if (this.data.footerColumn !== null || this.data.footerColumn > 0) {
-          if (this.data.footerColumn > 4) {
-            console.error('The footer column supports a maximum of 4 columns')
-            return 4
-          } else {
-            let _footerColumn = this.data.footerColumn
-            _footerColumn = 24 / _footerColumn
-            return _footerColumn
-          }
-        } else {
-          console.error('footerColumn needs to be set and cannot be 0 or empty')
-        }
-      }
-    }
   }
 }
 </script>
@@ -194,6 +161,7 @@ export default {
 
   .feature {
     width: 100%;
+    margin-bottom: 20px;
     h2 {
       font-weight: lighter;
       font-size: 30px;

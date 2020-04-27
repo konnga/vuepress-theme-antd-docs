@@ -9,6 +9,9 @@ features:
 - title: 设计思想
   details: 这是 Wisdom UI 评价设计好坏的内在标准。基于「每个人都追求快乐工作」这一假定，我们在「确定性」和「自然」的基础上，新增「意义感」和「生长性」两个价值观，指引每个设计者做更好地判断和决策。
   code: design
+- title: 设计思想
+  details: 这是 Wisdom UI 评价设计好坏的内在标准。基于「每个人都追求快乐工作」这一假定，我们在「确定性」和「自然」的基础上，新增「意义感」和「生长性」两个价值观，指引每个设计者做更好地判断和决策。
+  code: design
 footer: MIT Licensed | Copyright © 2020-present WisdomCity Technology
 footerColumn: 3
 footerWrap:

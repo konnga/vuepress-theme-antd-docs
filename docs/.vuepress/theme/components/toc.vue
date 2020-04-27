@@ -1,13 +1,13 @@
-<style scoped>
+<style lang="less">
 .toc {
   z-index: 1000;
   position: fixed;
   top: 100px;
   right: 0;
   margin: auto 2rem;
-}
-.toc ul {
-  list-style-type: none;
+  ul {
+    list-style-type: none;
+  }
 }
 </style>
 <template>
@@ -17,6 +17,6 @@
 </template>
 <script>
 export default {
-  name: 'toc'
+  name: 'Toc'
 }
 </script>

@@ -5,12 +5,9 @@ title: Wisdom UI of Vue
 
 `wisdom ui` 是基于 Wisdom 设计体系的 Vue UI 组件库，主要用于研发企业级中后台产品。
 
-<toc>
-
+::: slot toc
 [[toc]]
-
-</toc>
-
+:::
 
 <div class="pic-plus">
   <img width="150" src="../../assets/wc.png"/>

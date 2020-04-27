@@ -1,10 +1,12 @@
+---
+
+---
+
 # Hello World
 
-<toc>
-
+::: slot toc
 [[toc]]
-
-</toc>
+:::
 
 ## 何时使用
 
