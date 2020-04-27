@@ -11,8 +11,6 @@
 
 ## 代码演示
 
-<hello-world />
-
 ::: details 基本用法
 
 ```vue
