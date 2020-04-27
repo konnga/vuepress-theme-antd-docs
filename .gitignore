@@ -1,0 +1,10 @@
+node_modules
+
+*-debug.log
+*-error.log
+
+lib
+
+.temp
+
+dist/
