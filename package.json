@@ -1,25 +1,18 @@
 {
   "name": "vuepress-theme-antd-docs",
   "title": "Ant Design Docs of VuePress",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "vuepress antd docs",
   "author": "konnga <https://github.com/konnga>",
   "homepage": "",
   "main": "index.js",
   "license": "MIT",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
   "keywords": [
     "theme",
     "vuepress",
     "vuepress-theme",
     "antd",
     "ant-design"
-  ],
-  "files": [
-    "lib"
   ],
   "repository": {
     "type": "git",
