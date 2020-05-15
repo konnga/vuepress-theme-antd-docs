@@ -1,25 +1,29 @@
 {
-  "name": "wisdom-site",
-  "version": "0.0.1",
-  "description": "> TODO: description",
+  "name": "vuepress-theme-antd-docs",
+  "title": "Ant Design Docs of VuePress",
+  "version": "0.0.4",
+  "description": "vuepress antd docs",
   "author": "konnga <https://github.com/konnga>",
   "homepage": "",
-  "license": "ISC",
+  "main": "index.js",
+  "license": "MIT",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
+  "keywords": [
+    "theme",
+    "vuepress",
+    "vuepress-theme",
+    "antd",
+    "ant-design"
+  ],
   "files": [
     "lib"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/konnga/vuepress-theme-antd-docs.git"
-  },
-  "scripts": {
-    "docs:dev": "vuepress dev docs --temp .temp",
-    "docs:build": "vuepress build docs",
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
     "@vuepress/plugin-active-header-links": "^1.4.1",

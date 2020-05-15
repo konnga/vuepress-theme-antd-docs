@@ -1,5 +1,3 @@
-# `wisdom-site`
-
 本项目是使用 vuepress 开发的文档平台，用于在线展示组件的使用方式及相关文档。
 
 demo: http://114.67.95.144/docs/
@@ -8,11 +6,11 @@ demo: http://114.67.95.144/docs/
 
 ## 安装依赖
 ```shell
-yarn vuepress-theme-ant-docs
+yarn vuepress-theme-antd-docs
 
 # or
 
-npm install vuepress-theme-ant-docs
+npm install vuepress-theme-antd-docs
 ```
 
 ## 配置说明
@@ -23,7 +21,7 @@ npm install vuepress-theme-ant-docs
 
 ```js
 module.exports = {
-  theme: 'antdocs'
+  theme: 'vuepress-theme-antd-docs'
 }
 ```
 
