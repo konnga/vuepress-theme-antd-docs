@@ -21,7 +21,7 @@ npm install vuepress-theme-antd-docs
 
 ```js
 module.exports = {
-  theme: 'vuepress-theme-antd-docs'
+  theme: 'antd-docs'
 }
 ```
 
@@ -66,7 +66,7 @@ footerWrap:
 
 主题配置与官网默认配置相同，请查看[vuepress 默认主题配置](https://vuepress.vuejs.org/zh/theme/default-theme-config.html)
 
-这里提供一个参考配置：
+这里提供一个参考配置`.vuepress/config.js`：
 
 ```js
 themeConfig: {
