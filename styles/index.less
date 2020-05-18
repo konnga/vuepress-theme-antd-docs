@@ -18,10 +18,11 @@ html,body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
 }
-body{
-  font-size: @bodyFontSize;
-  color: @bodyTextColor;
+
+* {
+  box-sizing: content-box;
 }
+
 *::-webkit-scrollbar {
   width: 4px; 
 }
@@ -207,6 +208,27 @@ hr {
       top: 0;
     }
   }
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+}
+
+tr {
+  border-top: 1px solid #dfe2e5;
+
+  &:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
+}
+
+th, td {
+  border: 1px solid #dfe2e5;
+  padding: 0.6em 1em;
 }
 
 @media (min-width: (@MQMobile + 1px)) {

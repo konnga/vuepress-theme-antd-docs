@@ -2,7 +2,7 @@
   "name": "vuepress-theme-antd-docs",
   "title": "Ant Design Docs of VuePress",
   "version": "0.0.9",
-  "description": "vuepress antd docs",
+  "description": "vuepress ant design docs",
   "author": "konnga <https://github.com/konnga>",
   "homepage": "",
   "main": "index.js",
@@ -12,7 +12,8 @@
     "vuepress",
     "vuepress-theme",
     "antd",
-    "ant-design"
+    "ant-design",
+    "antd-docs"
   ],
   "repository": {
     "type": "git",

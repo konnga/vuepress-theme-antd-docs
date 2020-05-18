@@ -1,4 +1,4 @@
-本项目是使用 vuepress 开发的文档平台，用于在线展示组件的使用方式及相关文档。
+本项目是使用 vuepress 开发的文档平台，ant design 文档风格，用于在线展示组件的使用方式及相关文档。
 
 demo: http://114.67.95.144/docs/
 
@@ -12,6 +12,13 @@ yarn vuepress-theme-antd-docs
 
 npm install vuepress-theme-antd-docs
 ```
+
+## Todo
+
+- [] API Table 组件
+- [] 侧边栏分类
+- [] 代码显示
+- [] 索引菜单层级
 
 ## 配置说明
 
