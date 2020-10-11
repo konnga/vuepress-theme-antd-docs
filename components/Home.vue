@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="height: 100%">
     <main class="home" aria-labelledby="main-title">
       <header class="hero">
         <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" class="hero-logo"/>
@@ -20,11 +20,21 @@
             {{ data.actionText }}
           </RouterLink>
         </a-button>
+        <a-row v-if="data.extAction && data.extAction.length" type="flex" justify="center" class="ext">
+          <a-col v-for="(ext, index) in data.extAction" :key="index">
+            <a-button type="link" class="ext-btn">
+                <img v-if="ext.items.icon" :src="$withBase(ext.items.icon)" class="ext-icon" />
+                <a :href="link(ext.items.link)" target="_blank">
+                  {{ ext.items.text }}
+                </a>
+            </a-button>
+          </a-col>
+        </a-row>
         <a-button type="primary" shape="round" size="large" ghost v-if="data.preactionText && data.preactionLink" class="pre-btn">
           <a v-if="isExtlink(data.preactionLink)" :href="link(data.preactionLink)" target="_blank">
             {{ data.preactionText }}
           </a>
-          <RouterLink v-else :to="link(data.preactionLink)">
+          <RouterLink v-else :to="link(ext.preactionLink)">
             {{ data.preactionText }}
           </RouterLink>
         </a-button>
@@ -33,8 +43,8 @@
       <Content class="theme-antdocs-content custom" />
     </main>
 
-    <main class="content">
-      <div v-if="data.features && data.features.length" class="features">
+    <main class="content" v-if="data.features && data.features.length">
+      <div class="features">
         <div v-for="(feature, index) in data.features" :key="index" class="feature">
           <h2>{{ feature.title }}</h2>
           <div :class="[feature.code ? feature.code : '']">{{ feature.details }}</div>
@@ -63,7 +73,8 @@ export default {
   },
   methods:{
     isExtlink(path) {
-      const Reg = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\*\+,;=.]+$/
+      // const Reg = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\*\+,;=.]+$/
+      const Reg = /^(?:http(s)?:\/\/)[^\s]*/
       return Reg.test(path)
     },
     link(url) {
@@ -99,11 +110,11 @@ export default {
   padding: @navbarHeight 2rem;
   margin: 0px auto;
   display: block;
-  margin-bottom: 40px;
   position: relative;
   overflow: hidden;
   background: url('../assets/bg.svg');
   background-size: cover;
+  height: 100%;
 
   .hero {
     text-align: center;
@@ -145,6 +156,16 @@ export default {
 
       &:hover {
         background-color: lighten(@accentColor, 10%);
+      }
+    }
+  }
+  .ext {
+    margin-top: 10px;
+    .ext-btn {
+      line-height: 16px;
+      .ext-icon {
+        width: 16px;
+        font-size: 16px;
       }
     }
   }
@@ -203,7 +224,7 @@ export default {
   color: rgba(255, 255, 255, 0.4);
   .footer-container {
     max-width: 1100px;
-    padding: 5rem 0;
+    padding: 3rem 0;
     margin: 0 auto;
 
     h2 {

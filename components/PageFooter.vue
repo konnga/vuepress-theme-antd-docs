@@ -70,7 +70,6 @@ computed: {
   width: 100%;
   clear: both;
   font-size: .875rem;
-  margin-top: 18px;
   background-color: #000;
   color: rgba(255, 255, 255, 0.4);
   .footer-container {
