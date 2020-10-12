@@ -40,9 +40,8 @@
         </a-button>
       </header>
 
-      <Content class="theme-antdocs-content custom" />
     </main>
-
+    <Content class="theme-antdocs-content custom" />
     <main class="content" v-if="data.features && data.features.length">
       <div class="features">
         <div v-for="(feature, index) in data.features" :key="index" class="feature">

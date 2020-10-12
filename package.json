@@ -1,7 +1,7 @@
 {
   "name": "vuepress-theme-antd-docs",
   "title": "Ant Design Docs of VuePress",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "vuepress ant design docs",
   "author": "konnga <https://github.com/konnga>",
   "homepage": "",
